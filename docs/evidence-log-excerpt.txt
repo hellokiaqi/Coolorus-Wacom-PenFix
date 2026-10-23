@@ -1,0 +1,63 @@
+Verbatim excerpt from the panel's diagnostic log after the fix was installed.
+Environment: Photoshop 2026 27.10, CEP 12.0.0 (Chromium 99.0.4844.84),
+Coolorus 2.7.1, Wacom Art Pen 2, Wacom driver 6.4.15-1, Windows 11 10.0.26300.
+
+Field glossary
+--------------
+PRESS pen at x,y   pointerdown received from the pen; the canvas under the pen is resolved
+SYNTH mousedown    no native mousedown arrived within 60 ms, so one was dispatched
+PRESS end(...)     end of the press; downNative=false proves the web view never sent a native
+                   mousedown; driven=N counts how many positions were fed into the createjs stage
+SYNTH mouseup      no native mouseup arrived, so one was dispatched
+canvas=...         the canvas that owns the drag
+stage=yes          the createjs stage for that canvas was resolved
+
+--------------------------------------------------------------------------------
+
+12:37:59.891  ===== penfix v5 loaded
+12:37:59.892  penfix v5 ready
+12:38:02.229  PRESS pen at 128,162 canvas=CANVAS#picker_canvas stage=yes
+12:38:02.303  SYNTH mousedown at 128,162
+12:38:02.523  PRESS end(pointerup) ms=294 downNative=false synthDown=true upNative=false driven=15
+12:38:02.524  SYNTH mouseup
+12:38:02.746  PRESS pen at 148,153 canvas=CANVAS#picker_canvas stage=yes
+12:38:02.808  SYNTH mousedown at 148,153
+12:38:03.131  PRESS end(pointerup) ms=385 downNative=false synthDown=true upNative=false driven=35
+12:38:03.132  SYNTH mouseup
+12:38:03.387  PRESS pen at 148,168 canvas=CANVAS#picker_canvas stage=yes
+12:38:03.448  SYNTH mousedown at 148,168
+12:38:03.739  PRESS end(pointerup) ms=352 downNative=false synthDown=true upNative=false driven=54
+12:38:03.741  SYNTH mouseup
+12:38:04.037  PRESS pen at 139,168 canvas=CANVAS#picker_canvas stage=yes
+12:38:04.103  SYNTH mousedown at 139,168
+12:38:04.356  PRESS end(pointerup) ms=319 downNative=false synthDown=true upNative=false driven=72
+12:38:04.357  SYNTH mouseup
+12:38:04.578  PRESS pen at 145,163 canvas=CANVAS#picker_canvas stage=yes
+12:38:04.648  SYNTH mousedown at 145,163
+12:38:05.173  PRESS end(pointerup) ms=595 downNative=false synthDown=true upNative=false driven=104
+12:38:05.174  SYNTH mouseup
+12:38:05.486  PRESS pen at 115,193 canvas=CANVAS#picker_canvas stage=yes
+12:38:05.555  SYNTH mousedown at 115,193
+12:38:05.721  PRESS end(pointerup) ms=235 downNative=false synthDown=true upNative=false driven=118
+12:38:05.721  SYNTH mouseup
+12:38:06.244  PRESS pen at 38,120 canvas=CANVAS#picker_canvas stage=yes
+12:38:06.310  SYNTH mousedown at 38,120
+12:38:06.830  PRESS end(pointerup) ms=586 downNative=false synthDown=true upNative=false driven=148
+12:38:06.831  SYNTH mouseup
+
+--------------------------------------------------------------------------------
+
+Same session, slider surfaces (the panel switched to the HSV tab):
+
+12:38:20.552  PRESS pen at 90,398 canvas=CANVAS#sliders_HSV_S_canvas stage=yes
+12:38:20.617  SYNTH mousedown at 90,398
+12:38:20.971  PRESS end(pointerup) ms=419 downNative=false synthDown=true upNative=false driven=609
+12:38:20.972  SYNTH mouseup
+12:38:21.235  PRESS pen at 115,379 canvas=CANVAS#sliders_HSV_H_canvas stage=yes
+12:38:21.298  SYNTH mousedown at 115,379
+12:38:21.745  PRESS end(pointerup) ms=510 downNative=false synthDown=true upNative=false driven=635
+12:38:21.746  SYNTH mouseup
+12:38:22.143  PRESS pen at 126,433 canvas=CANVAS#sliders_HSV_V_canvas stage=yes
+12:38:22.204  SYNTH mousedown at 126,433
+12:38:22.728  PRESS end(pointerup) ms=585 downNative=false synthDown=true upNative=false driven=662
+12:38:22.729  SYNTH mouseup

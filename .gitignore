@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# logs and local debug output
+*.log
+coolorus-penfix.log
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editors
+.vscode/
+.idea/
